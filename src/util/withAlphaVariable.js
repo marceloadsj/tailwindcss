@@ -34,8 +34,7 @@ export default function withAlphaVariable({ color, property, variable }) {
     }
 
     return {
-      [variable]: '1',
-      [property]: `rgba(${r}, ${g}, ${b}, var(${variable}))`,
+      [property]: `rgba(${r}, ${g}, ${b}, var(${variable}, 1))`,
     }
   } catch (error) {
     return {
